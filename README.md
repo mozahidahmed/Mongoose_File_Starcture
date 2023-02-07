@@ -5,6 +5,13 @@
     <li>create app.js file > just create a route ("/") and export  </li>
     <li> Create server.js > import app.js file> app.listen check > Connect Mongoose </li>
 
+    
+    
+
+</ol> 
+
+<ol>
+  
     <h5>Schema Design </h5>
     <li>SchemaDesign>Model(collextion) > Query</li>
     
