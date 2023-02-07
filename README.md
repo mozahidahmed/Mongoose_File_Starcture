@@ -10,11 +10,5 @@
 
 </ol> 
 
-<ol>
-  
-    
-    <li>SchemaDesign>Model(collextion) > Query</li>
-    
 
-</ol> 
-
+<h5>Schema Design</h5>
