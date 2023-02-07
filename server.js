@@ -19,7 +19,6 @@ mongoose.connect(process.env.DATABASE).then(()=>{
 
 
 
-
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`.yellow.bold)
 })
