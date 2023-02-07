@@ -12,7 +12,7 @@
 
 <ol>
   
-    <h5>Schema Design </h5>
+    
     <li>SchemaDesign>Model(collextion) > Query</li>
     
 
