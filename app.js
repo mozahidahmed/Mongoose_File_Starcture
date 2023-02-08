@@ -4,10 +4,12 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 
+// middleware
 app.use(express.json());
 app.use(cors());
 
-// schema design
+
+// schema design..........................................
 const productSchema = mongoose.Schema({
   name: {
     type: String,
@@ -84,10 +86,7 @@ const productSchema = mongoose.Schema({
 
 
 // mongoose middlewares for saving data: pre / post 
-
  productSchema.pre('save',function(next){
-
-  //this -> 
    console.log(' Before saving data');
      if (this.quantity == 0) {
       this.status = 'out-of-stock'
@@ -96,40 +95,62 @@ const productSchema = mongoose.Schema({
    next()
  })
 
-
-//  productSchema.post('save',function(doc,next){
-//   console.log('After saving data');
-
-//   next()
-// })
-
 productSchema.methods.logger= function(){
-  console.log(` Data saved for ${this.name}`);
+  console.log(`After saved for ${this.name}`);
 }
 
 
-// SCHEMA -> MODEL -> QUERY
 
+// SCHEMA -> MODEL -> QUERY
 const Product = mongoose.model('Product', productSchema)
 
 
 
-app.get("/", (req, res) => {
-  res.send("Route is working! YaY!");
+// app.get("/products",async(req, res) => {
+//   try {
+//     const result = await Product.find({}) 
+//     res.status(200).json({
+//      status: 'success',
+//      message: 'Data inserted successfully!',
+//      data: result
+//    })
+//  } catch (error) {
+//    res.status(400).json({
+//      status: 'fail',
+//      message: ' Data is not inserted ',
+//      error: error.message
+//    })
+//  }
+// });
+
+
+app.get("/products",async(req, res) => {
+  try {
+    const result = await Product.find({}) 
+    res.status(200).json({
+     status: 'success',
+     message: 'Data inserted successfully!',
+     data: result
+   })
+ } catch (error) {
+   res.status(400).json({
+     status: 'fail',
+     message: ' Data is not inserted ',
+     error: error.message
+   })
+ }
 });
 
+
+
 // posting to database
-
 app.post('/product', async (req, res, next) => {
-
   try {
-    // save or create
-
      const result = await Product.create(req.body) 
      result.logger()
      res.status(200).json({
       status: 'success',
-      messgae: 'Data inserted successfully!',
+      message: 'Data inserted successfully!',
       data: result
     })
   } catch (error) {
@@ -145,6 +166,16 @@ app.post('/product', async (req, res, next) => {
 
 
 module.exports = app;
+
+
+
+
+
+
+
+
+
+
 
 
 
