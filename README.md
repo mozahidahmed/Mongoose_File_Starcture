@@ -14,7 +14,7 @@
 
 </ol> 
 
-<h5>Hosting  connsct Mongodb Compas </h5>
+<h5>Hosting  connnect Mongodb Compas </h5>
 <img width="100%" height="" src="https://i.ibb.co/PWktNMQ/Screenshot-37.png">
 
 <h5>Copay this Link </h5>
