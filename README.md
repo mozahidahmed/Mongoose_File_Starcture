@@ -1,6 +1,8 @@
 
  <ol>
   <h3>Learn Overviews Mongoose </h3>
+ <h5>Schema Design</h5>
+     <li>Sechema > Modal(collection) > Query (App.js file)  </li>
 
     <h5>Connect Database</h5>
     <li>create app.js file > just create a route ("/") and export  </li>
