@@ -1,7 +1,7 @@
 
  <ol>
-  <h3>Learn Overviews Mongoose </h3>
-  <h3> Three most important option schema > modal >query</h3>
+  <h5>Learn Overviews Mongoose </h5>
+  <h5> Three most important option schema > modal >query</h5>
     <h5>Connect Database</h5>
     <li>create app.js file > just create a route ("/") and export  </li>
     <li> Create server.js > import app.js file> app.listen check > Connect Mongoose </li>
