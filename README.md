@@ -1,6 +1,6 @@
 
  <ol>
-  <h3>Learn Overviews Mongoose </h3>
+  <h3>Learn Overview Mongoose </h3>
  <h5>Connect Database</h5>
      <li>create app.js file > just create a route ("/") and export </li>
    <li>Create server.js > import app.js file> app.listen check > Connect Mongoose</li>
